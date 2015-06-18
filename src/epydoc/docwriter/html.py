@@ -1063,7 +1063,7 @@ class HTMLWriter:
             else:
                 out('  %s\n' % sec)
         out(']\n')
-        out('</td></table>\n')
+        out('</td></tr></table>\n')
 
         # Alphabetical sections.
         sections = [s for s in sections if s in index_by_section]
