@@ -498,6 +498,8 @@ class _SplitFieldsTranslator(NodeVisitor):
                 elif child.data[:2] in (' -', ' :'):
                     child.data = child.data[2:].lstrip()
 
+                fbody[0][0] = docutils.nodes.Text(child)
+
             # Wrap the field body, and add a new field
             self._add_field(tagname, arg, fbody)
         
