@@ -26,6 +26,8 @@ __docformat__ = 'epytext en'
 
 import re
 
+import html_css_sphinx
+
 ############################################################
 ## Basic stylesheets
 ############################################################
@@ -535,6 +537,8 @@ _BLACK = _COLOR_RE.sub(r'#\3\2\1', _COLOR_RE.sub(_rv, _WHITE))
 # Grayscale
 _GRAYSCALE = _COLOR_RE.sub(r'#\2\2\2', _WHITE)
 
+_SPHINX = html_css_sphinx.TEMPLATE
+
 ############################################################
 ## Stylesheet table
 ############################################################
@@ -547,4 +551,5 @@ STYLESHEETS = {
     'grayscale': (_GRAYSCALE, "Grayscale black on white"),
     'default': (_WHITE, "Default stylesheet (=white)"),
 #    'none': (_LAYOUT, "A base stylesheet (no color modifications)"),
+    'sphinx' : (_SPHINX, "Sphinx based stylesheet"),
     }
