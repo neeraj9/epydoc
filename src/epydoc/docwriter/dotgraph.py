@@ -1495,7 +1495,7 @@ def call_graph(api_docs, docindex, linker, context=None, **options):
 ######################################################################
 
 _dot_version = None
-_DOT_VERSION_RE = re.compile(r'dot version ([\d\.]+)')
+_DOT_VERSION_RE = re.compile(r'dot .* version ([\d\.]+)')
 def get_dot_version():
     global _dot_version
     if _dot_version is None:
@@ -1506,6 +1506,8 @@ def get_dot_version():
             if m:
                 _dot_version = [int(x) for x in m.group(1).split('.')]
             else:
+                log.warn('Cannot parse through the dot version (v=%s)' \
+                         % (version_info))
                 _dot_version = (0,)
         except OSError, e:
             log.error('dot executable not found; graphs will not be '
