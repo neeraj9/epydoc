@@ -25,6 +25,7 @@ from epydoc.docwriter import html_colorize
 from epydoc.docwriter.html_css import STYLESHEETS
 from epydoc.docwriter.html_help import HTML_HELP
 from epydoc.docwriter.dotgraph import *
+from epydoc.docwriter import pygments_css
 from epydoc import log
 from epydoc.util import plaintext_to_html, is_src_filename
 from epydoc.compat import * # Backwards compatibility
@@ -1452,6 +1453,11 @@ class HTMLWriter:
         # Write the stylesheet.
         cssfile = open(filename, 'w')
         cssfile.write(css)
+        cssfile.close()
+
+        # Write the pygments stylesheet.
+        cssfile = open(os.path.join(directory, 'pygments.css'), 'w')
+        cssfile.write(pygments_css.CONTENT)
         cssfile.close()
 
     #////////////////////////////////////////////////////////////

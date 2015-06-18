@@ -764,6 +764,13 @@ def term_role(name, rawtext, text, lineno, inliner,
 roles.register_local_role('term', term_role)
 
 ######################################################################
+#{ Pygments Generation Directives
+######################################################################
+# See http://pygments.org/docs/rstdirective/
+
+import pygments_rst_directive
+
+######################################################################
 #{ Graph Generation Directives
 ######################################################################
 # See http://docutils.sourceforge.net/docs/howto/rst-directives.html

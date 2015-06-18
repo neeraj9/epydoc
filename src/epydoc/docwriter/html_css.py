@@ -52,6 +52,9 @@ TEMPLATE = r"""
  *
  */
 
+/* Import stylesheet for pygments highlighted code */
+@import url("pygments.css");
+
 /* Default Colors & Styles
  *   - Set the default foreground & background color with 'body'; and 
  *     link colors with 'a:link' and 'a:visited'.

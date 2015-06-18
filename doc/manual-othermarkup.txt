@@ -237,11 +237,56 @@ directives are currently defined:
         the graph.
 
 
-Colorized snippets directive
-''''''''''''''''''''''''''''
+Colorized generic snippets directive
+''''''''''''''''''''''''''''''''''''
+
+Using reStructuredText markup it is possible to specify snippets in many
+languages (see Pygments_) in a
+`doctest block`__. This scheme can also be used to colorize python snippets.
+
+.. _Pygments:  http://pygments.org/docs/
+
+.. list-table::
+   :header-rows: 2
+
+   * -  Docstring Input
+     -  Rendered Output
+
+   * -  ::
+
+            .. sourcecode:: python
+
+                def fib(n):
+                    """Print a Fibonacci series."""
+                    a, b = 0, 1
+                    while b < n:
+                        print b,
+                        a, b = b, a+b
+
+     -  .. sourcecode:: python
+
+            def fib(n):
+                """Print a Fibonacci series."""
+                a, b = 0, 1
+                while b < n:
+                    print b,
+                    a, b = b, a+b
+
+   * -  ::
+
+            .. sourcecode:: bash
+
+                $ who am i
+
+     -  .. sourcecode:: bash
+
+            $ who am i
+
+Colorized python snippets directive
+'''''''''''''''''''''''''''''''''''
 
 Using reStructuredText markup it is possible to specify Python snippets in a
-`doctest block`__. SUch block will be colorized as in epytext `Doctest Blocks`_.
+`doctest block`__. Such block will be colorized as in epytext `Doctest Blocks`_.
 
 .. __:      http://docutils.sourceforge.net/
             docs/user/rst/quickref.html#bullet-lists
