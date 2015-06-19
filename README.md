@@ -28,22 +28,16 @@ the source distribution.
 
 To install epydoc, use make:
 
-    [user epydoc-3.0]$ su
-    Password:
-    [root epydoc-3.0]# make install
-    [root epydoc-3.0]# make installdocs
+    git clone https://github.com/neeraj9/epydoc.git
+    cd epydoc/src
+    sudo make install
+    sudo make installdocs
 
 Or use the distutils setup.py script:
 
-    [user epydoc-3.0]$ su
-    Password:
-    [root epydoc-3.0]# python setup.py install
-
-For complete installation instructions, including instructions on
-how to install from RPM package, Debian package, or the windows
-installer, see the epydoc homepage:
-
-    <http://epydoc.sourceforge.net/installing.html>
+    git clone https://github.com/neeraj9/epydoc.git
+    cd epydoc/src
+    sudo python setup.py install
 
 ## Usage
 
