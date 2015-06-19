@@ -114,6 +114,8 @@ body {
 p {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 strong {
     /* font-style: italic; */
